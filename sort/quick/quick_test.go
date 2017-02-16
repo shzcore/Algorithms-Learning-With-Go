@@ -2,7 +2,7 @@ package quick
 
 import (
 	"fmt"
-	"go-algorithms/sort/utils"
+	"Algorithms-Learning-With-Go/sort/utils"
 	
 	"testing"
 )
@@ -11,7 +11,9 @@ import (
 func TestQuickSort(t *testing.T) {
 	list := utils.GetArrayOfSize(10)
 			
-	Sort(list)
+	// Sort(list)
+	HoareSort(list, 0, len(list)-1)
+	// LomutoSort(list, 0, len(list)-1)
 
 	for i := 0; i < len(list)-2; i++ {
 		if list[i] > list[i+1] {
@@ -26,7 +28,10 @@ func benchmarkQuickSort(n int, b *testing.B) {
 	list := utils.GetArrayOfSize(n)
 	
 	for i := 0; i < b.N; i++ {
-		Sort(list)
+		// Sort(list)
+		// Sort(list)LomutoSort
+		// LomutoSort(list, 0, len(list)-1)
+		HoareSort(list, 0, len(list)-1)
 	}
 }
 

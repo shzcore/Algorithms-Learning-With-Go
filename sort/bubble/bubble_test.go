@@ -2,7 +2,7 @@ package bubble
 
 import (
 	"fmt"
-	"go-algorithms/sort/utils"
+	"Algorithms-Learning-With-Go/sort/utils"
 	
 	"testing"
 )
