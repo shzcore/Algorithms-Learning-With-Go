@@ -233,4 +233,4 @@
 数学研究最抽象的数与结构的量、量变及其关系，算法用它与逻辑来发现从具象的问题空间到解空间的逻辑映射。
 算法的思想就来自于数学、逻辑及求解的工具、方法与规律中。
 
-附：[动态规划常见具体问题清单](https://github.com/ningskyer/Algorithms-Learning-With-Go/dp-problems.md)
+附：[动态规划常见具体问题清单](https://github.com/ningskyer/Algorithms-Learning-With-Go/blob/master/dp-problems.md)
