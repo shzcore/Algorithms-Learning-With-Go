@@ -7,7 +7,7 @@
 全过程都是为了基准点pivot归位。
 
 # runtime
--Worst:O(n lg n)
+-Worst:O(n ^ 2)
 -Best:O(n lg n)
 -Average:O(n lg n)
 */
