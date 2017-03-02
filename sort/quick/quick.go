@@ -1,9 +1,15 @@
 /*
-When given an array, `quicksort()` splits it up into three parts based on a "pivot" variable. Here, the pivot is taken to be the element in the middle of the array (later on you'll see other ways to choose the pivot).
+# quick sort 快速排序
 
-All the elements less than the pivot go into a new array called `less`. All the elements equal to the pivot go into the `equal` array. And you guessed it, all elements greater than the pivot go into the third array, `greater`. This is why the generic type `T` must be `Comparable`, so we can compare the elements with `<`, `==`, and `>`.
+快速排序有几种实现方式，不过核心操作是选出一个基点比较值，通过一次遍历得出比它小的A和比它大的B无序数组，
+然后通过递归方式分别操作A与B,并将低值A结果放到基点左边，高值B结果放到基点右边。
 
-Once we have these three arrays, `quicksort()` recursively sorts the `less` array and the `right` array, then glues those sorted subarrays back together with the `equal` array to get the final result. 
+全过程都是为了基准点pivot归位。
+
+# runtime
+-Worst:O(n lg n)
+-Best:O(n lg n)
+-Average:O(n lg n)
 */
 package quick
 /*
@@ -59,8 +65,8 @@ func Sort(list []int) []int{
 
 /*
 	老毛桃 (Lomuto) 快排：
-	递归模板中不返回排序完的数组，而是返回遍历后低值数组的锚点的下标/索引p，以最右位置为基点比较元素，左边分区（包含
-	小于等于基点元素的元素）是相对p值的低值数组，右边分区（包含大于基点元素的元素）
+	以最右位置为基点比较元素，递归模板中不返回排序完的数组，而是返回遍历后基点比较元素应该所在的位置下标p，
+	左边分区（包含小于等于基点元素的元素）是相对p值的低值数组，右边分区（包含大于基点元素的元素）
 	是相对p值的高值数组。
 
 	评价——
